@@ -1,0 +1,70 @@
+{
+  "accuracy": 0.9125,
+  "classification_report": {
+    "NO_WATER": {
+      "precision": 0.9591836734693877,
+      "recall": 0.9447236180904522,
+      "f1-score": 0.9518987341772152,
+      "support": 597.0
+    },
+    "WATER_NOW": {
+      "precision": 0.8833333333333333,
+      "recall": 0.8548387096774194,
+      "f1-score": 0.8688524590163934,
+      "support": 186.0
+    },
+    "WATER_SOON": {
+      "precision": 0.8611111111111112,
+      "recall": 0.8920863309352518,
+      "f1-score": 0.8763250883392226,
+      "support": 417.0
+    },
+    "accuracy": 0.9125,
+    "macro avg": {
+      "precision": 0.9012093726379441,
+      "recall": 0.8972162195677078,
+      "f1-score": 0.8990254271776105,
+      "support": 1200.0
+    },
+    "weighted avg": {
+      "precision": 0.9133466553287981,
+      "recall": 0.9125,
+      "f1-score": 0.9127647195985854,
+      "support": 1200.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      564,
+      0,
+      33
+    ],
+    [
+      0,
+      159,
+      27
+    ],
+    [
+      24,
+      21,
+      372
+    ]
+  ],
+  "classes": [
+    "NO_WATER",
+    "WATER_NOW",
+    "WATER_SOON"
+  ],
+  "features": [
+    "soil_moisture",
+    "temperature",
+    "humidity"
+  ],
+  "feature_importances": {
+    "soil_moisture": 0.7234,
+    "temperature": 0.1827,
+    "humidity": 0.0939
+  },
+  "train_rows": 4800,
+  "test_rows": 1200
+}
