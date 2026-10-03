@@ -382,125 +382,6 @@ h2 {
   font-weight: 900;
 }
 
-
-/* TESTING */
-
-.testing-card {
-  padding: 0;
-  overflow: hidden;
-}
-
-.testing-toggle {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 22px 25px;
-  border: 0;
-  background: white;
-  color: var(--text);
-  cursor: pointer;
-  text-align: left;
-}
-
-.testing-toggle strong {
-  display: block;
-  font-size: 0.95rem;
-}
-
-.testing-toggle small {
-  display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  font-weight: 500;
-}
-
-#toggleSymbol {
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-
-.testing-content {
-  display: none;
-  padding: 0 25px 25px;
-}
-
-.testing-content.open {
-  display: block;
-}
-
-.testing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding-top: 22px;
-  border-top: 1px solid #edf1ed;
-}
-
-form {
-  display: grid;
-  gap: 15px;
-}
-
-label {
-  display: grid;
-  gap: 7px;
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-input {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #cbd8cd;
-  border-radius: 11px;
-  background: #fbfdfb;
-  font: inherit;
-}
-
-input:focus {
-  outline: 2px solid rgba(36, 115, 65, 0.15);
-  border-color: #6ca47c;
-}
-
-.primary-button {
-  padding: 13px 16px;
-  border: 0;
-  border-radius: 11px;
-  background: var(--green);
-  color: white;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.primary-button:hover {
-  background: #195e32;
-}
-
-.test-result {
-  padding: 22px;
-  border-radius: 16px;
-  background: #f6f9f6;
-}
-
-.test-prediction {
-  margin: 10px 0;
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--green-dark);
-}
-
-.test-probabilities > div {
-  display: flex;
-  justify-content: space-between;
-  padding: 9px 0;
-  border-bottom: 1px solid #e3eae4;
-  font-size: 0.85rem;
-}
-
-
 /* FOOTER */
 
 footer {
@@ -541,10 +422,6 @@ footer {
 
   .hero {
     flex-direction: column;
-  }
-
-  .testing-grid {
-    grid-template-columns: 1fr;
   }
 
   footer {

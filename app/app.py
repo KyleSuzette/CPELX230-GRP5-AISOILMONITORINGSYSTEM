@@ -85,26 +85,6 @@ def health():
     )
 
 
-@app.post("/api/predict")
-def predict():
-    data = request.get_json(silent=True) or request.form.to_dict()
-
-    readings, error = validate_readings(data)
-    if error:
-        return jsonify({"error": error}), 400
-
-    prediction, confidence, probabilities = make_prediction(readings)
-
-    return jsonify(
-        {
-            **readings,
-            "prediction": prediction,
-            "confidence": confidence,
-            "probabilities": probabilities,
-        }
-    )
-
-
 @app.post("/api/sensor")
 def sensor():
     """Endpoint intended for ESP32 sensor uploads."""

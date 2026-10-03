@@ -1,4 +1,3 @@
-const form = document.getElementById("predictionForm");
 
 function pct(value) {
   if (value === undefined || value === null) {
@@ -62,76 +61,6 @@ function setBar(id, probability) {
 
   element.style.width = `${value}%`;
 }
-
-
-/* ==========================
-   MANUAL TESTING
-========================== */
-
-function showPrediction(data) {
-  document.getElementById("prediction").textContent =
-    friendlyPrediction(data.prediction);
-
-  document.getElementById("confidence").textContent =
-    `Confidence: ${pct(data.confidence)}`;
-
-  const probs = data.probabilities || {};
-
-  document.getElementById("pNoWater").textContent =
-    pct(probs.NO_WATER);
-
-  document.getElementById("pWaterSoon").textContent =
-    pct(probs.WATER_SOON);
-
-  document.getElementById("pWaterNow").textContent =
-    pct(probs.WATER_NOW);
-}
-
-
-if (form) {
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const payload = {
-      soil_moisture: Number(
-        document.getElementById("soil_moisture").value
-      ),
-
-      temperature: Number(
-        document.getElementById("temperature").value
-      ),
-
-      humidity: Number(
-        document.getElementById("humidity").value
-      ),
-    };
-
-    try {
-      const response = await fetch("/api/predict", {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify(payload),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        alert(data.error || "Prediction failed.");
-        return;
-      }
-
-      showPrediction(data);
-
-    } catch (error) {
-      alert("Unable to communicate with the Flask server.");
-    }
-  });
-}
-
 
 /* ==========================
    LIVE SENSOR DASHBOARD
@@ -322,32 +251,6 @@ refreshLatest();
 
 setInterval(refreshLatest, 3000);
 
-
-/* ==========================
-   TESTING MODE TOGGLE
-========================== */
-
-const testingToggle =
-  document.getElementById("testingToggle");
-
-const testingContent =
-  document.getElementById("testingContent");
-
-const toggleSymbol =
-  document.getElementById("toggleSymbol");
-
-
-testingToggle.addEventListener("click", () => {
-
-  testingContent.classList.toggle("open");
-
-  if (testingContent.classList.contains("open")) {
-    toggleSymbol.textContent = "−";
-  } else {
-    toggleSymbol.textContent = "+";
-  }
-
-});
 /* ==========================
    SYSTEM FLOW INFORMATION
 ========================== */
