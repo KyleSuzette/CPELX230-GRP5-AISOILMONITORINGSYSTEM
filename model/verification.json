@@ -1,0 +1,9 @@
+{
+  "flask_routes": "passed",
+  "invalid_input_checks": "passed",
+  "cpp_compilation": "passed with host g++",
+  "cpp_python_prediction_matches": 3200,
+  "comparison_rows": 3200,
+  "wokwi_browser_simulation": "not run",
+  "esp32_arduino_compilation": "not run; Arduino toolchain unavailable"
+}

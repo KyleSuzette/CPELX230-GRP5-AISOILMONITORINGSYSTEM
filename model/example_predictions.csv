@@ -1,0 +1,4 @@
+soil_moisture,temperature,humidity,prediction
+20,24,40,WATER_SOON
+50,32,40,WATER_SOON
+85,24,70,NO_WATER

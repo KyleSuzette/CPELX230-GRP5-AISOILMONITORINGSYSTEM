@@ -1,0 +1,76 @@
+{
+  "model": "StandardScaler + RBF SVC",
+  "accuracy": 0.9216666666666666,
+  "classification_report": {
+    "NO_WATER": {
+      "precision": 0.9628378378378378,
+      "recall": 0.9547738693467337,
+      "f1-score": 0.95878889823381,
+      "support": 597.0
+    },
+    "WATER_NOW": {
+      "precision": 0.8983050847457628,
+      "recall": 0.8548387096774194,
+      "f1-score": 0.8760330578512396,
+      "support": 186.0
+    },
+    "WATER_SOON": {
+      "precision": 0.8747099767981439,
+      "recall": 0.9040767386091128,
+      "f1-score": 0.8891509433962265,
+      "support": 417.0
+    },
+    "accuracy": 0.9216666666666666,
+    "macro avg": {
+      "precision": 0.9119509664605815,
+      "recall": 0.9045631058777553,
+      "f1-score": 0.9079909664937587,
+      "support": 1200.0
+    },
+    "weighted avg": {
+      "precision": 0.9222108293972726,
+      "recall": 0.9216666666666666,
+      "f1-score": 0.9217625536684513,
+      "support": 1200.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      570,
+      0,
+      27
+    ],
+    [
+      0,
+      159,
+      27
+    ],
+    [
+      22,
+      18,
+      377
+    ]
+  ],
+  "classes": [
+    "NO_WATER",
+    "WATER_NOW",
+    "WATER_SOON"
+  ],
+  "features": [
+    "soil_moisture",
+    "temperature",
+    "humidity"
+  ],
+  "train_rows": 4800,
+  "test_rows": 1200,
+  "best_parameters": {
+    "svm__C": 1,
+    "svm__gamma": 0.1
+  },
+  "training_cv_macro_f1": 0.9020713934718979,
+  "search_seconds": 2.8998779429999786,
+  "sklearn_version": "1.8.0",
+  "support_vectors": 1325,
+  "dataset_sha256": "f6e42a577b232c61c8d92f1ddfa3f8e26e47722569fdec69afe76c44ee963832",
+  "data_source": "Existing synthetic demonstration dataset; labels from assumed demand formula, not observed irrigation outcomes."
+}
